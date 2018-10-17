@@ -20,6 +20,7 @@
 	  firebase.initializeApp(config);
 	</script>
 
+
 	<style>
 	canvas {
 		-moz-user-select: none;
@@ -38,6 +39,21 @@
 	<button id="removeDataset">Remove Dataset</button>
 	<button id="addData">Add Data</button>
 	<button id="removeData">Remove Data</button>
+	<script>
+		// Initialize Cloud Firestore through Firebase
+		var db = firebase.firestore();
+
+		// Disable deprecated features
+		db.settings({
+		  timestampsInSnapshots: true
+		});
+			db.collection("users").add({
+			    first: "Alan",
+			    middle: "Mathison",
+			    last: "Turing",
+			    born: 1912
+		})
+	</script>
 	<script>
 		var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 		var color = Chart.helpers.color;
