@@ -1,4 +1,3 @@
-
 window.chartColors = {
 	red: 'rgb(255, 99, 132)',
 	orange: 'rgb(255, 159, 64)',
@@ -131,9 +130,5 @@ window.chartColors = {
 
 	Samples.utils.srand(Date.now());
 
-	// Google Analytics
-	/* eslint-disable */
-	
-	/* eslint-enable */
 
 }(this));
